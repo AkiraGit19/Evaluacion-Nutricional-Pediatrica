@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+/* El acento cambia con el sexo del paciente: se inyecta como variable CSS desde App.tsx. */
+@theme inline {
+  --font-sans: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+}
+
+/* Radios: tarjetas 14px, controles 10px, chips completos. */
+body {
+  @apply bg-[#f5f5f6] text-zinc-900 antialiased;
+  font-feature-settings: "tnum" 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
